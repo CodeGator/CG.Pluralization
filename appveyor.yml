@@ -19,7 +19,7 @@ branches:
       - master  
 environment:
   COVERALLS_REPO_TOKEN:
-    secure: J+p4MQomyXrbdJHiCn6AI6pQ+QzHcpCAVPHWTVm7YN6ndAm2q26GuEYDc0em0PjA
+    secure: cbqlOmIX0yBIg1IsaBazw4VMFM8zL9Yaee77k2XsdsSN3cEXLkOHJ4knRlLxtzBE
 before_build:
 - cmd: before_build.cmd
 build:
