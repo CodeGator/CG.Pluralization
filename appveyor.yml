@@ -1,0 +1,41 @@
+version: 0.2018.1.{build}
+image: Visual Studio 2017
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+branches:
+    only:
+      - master  
+environment:
+  COVERALLS_REPO_TOKEN:
+    secure: J+p4MQomyXrbdJHiCn6AI6pQ+QzHcpCAVPHWTVm7YN6ndAm2q26GuEYDc0em0PjA
+before_build:
+- cmd: before_build.cmd
+build:
+  project: CG.Pluralization.sln
+  verbosity: minimal
+test:
+  categories:
+    except:
+    - Integration
+after_test:
+- cmd: after_test.cmd
+artifacts:
+- path: .\CG.Pluralization\bin\Debug\*.nupkg
+  name: nuget-packages
+deploy:
+- provider: NuGet
+  api_key:
+    secure: LuRaS+cj/+AZmxpLROdHXR5vF4tvW42LzSmtphgkr3FLwQOl732UNtnmLiiAOXr1
+  artifact: nuget-packages

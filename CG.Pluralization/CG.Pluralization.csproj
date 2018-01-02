@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworks>netstandard2.0;netcoreapp2.0</TargetFrameworks>
+    <DocumentationFile></DocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Version>0.2018.1</Version>
+    <Description>This package contains a portable version of the .NET pluralization service from the System.Data.Entity.Design namespace, that works with .NET 4.61 or above, .NET Core 2.x, or .NET Standard 2.x.
+
+</Description>
+    <Copyright>Original code Copyright (c) Microsoft Corporation.  All rights reserved. Any alterations Copyright CodeGator. All rights reserved.</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/CodeGator/CG.Pluralization</PackageProjectUrl>
+    <PackageTags>pluralize, singularize, CG.Pluralization</PackageTags>
+    <Authors>Martin Cook</Authors>
+    <Company>CodeGator</Company>
+    <PackageIconUrl>http://www.codegator.com/packageDefaultIcon-50x50.png</PackageIconUrl>
+    <FileVersion>0.2018.1.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
