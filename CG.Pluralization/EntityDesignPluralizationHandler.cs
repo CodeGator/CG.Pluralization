@@ -8,7 +8,9 @@
 //---------------------------------------------------------------------
 using System;
 
-namespace CG.Pluralization
+#if !NET40
+
+namespace System.Data.Entity.Design.PluralizationServices
 {
     internal class EntityDesignPluralizationHandler
     {
@@ -43,3 +45,5 @@ namespace CG.Pluralization
         }
     }
 }
+
+#endif

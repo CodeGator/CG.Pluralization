@@ -12,7 +12,9 @@ using System.Text;
 using System.Linq;
 using System.Globalization;
 
-namespace CG.Pluralization
+#if !NET40
+
+namespace System.Data.Entity.Design.PluralizationServices
 {
     internal static class PluralizationServiceUtil
     {
@@ -37,3 +39,5 @@ namespace CG.Pluralization
         }
     }
 }
+
+#endif

@@ -8,7 +8,13 @@
 //---------------------------------------------------------------------
 using System;
 
-namespace CG.Pluralization
+#if NET40
+
+[assembly: System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Data.Entity.Design.PluralizationServices.ICustomPluralizationMapping))]
+
+#else
+
+namespace System.Data.Entity.Design.PluralizationServices
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Pluralization")]
     public interface ICustomPluralizationMapping
@@ -16,3 +22,5 @@ namespace CG.Pluralization
         void AddWord(string singular, string plural);
     }
 }
+
+#endif

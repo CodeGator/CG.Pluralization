@@ -13,7 +13,9 @@ using System.Text;
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace CG.Pluralization
+#if !NET40
+
+namespace System.Data.Entity.Design.PluralizationServices
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Pluralization")]
     internal class EnglishPluralizationService : PluralizationService, ICustomPluralizationMapping
@@ -175,7 +177,7 @@ namespace CG.Pluralization
                 "they", "them", "their", "have", "were", "yourself", "are"
             };
 
-        // this list contains the words ending with "se" and we special case these words since 
+        // this list contains the words ending with "se" and we special case these words since
         // we need to add a rule for "ses" singularize to "s"
         private Dictionary<string, string> _wordsEndingWithSeDictionary =
             new Dictionary<string, string>()
@@ -361,7 +363,7 @@ namespace CG.Pluralization
             }
         }
 
-        // 
+        //
         public override string Pluralize(string word)
         {
             return Capitalize(word, InternalPluralize);
@@ -462,7 +464,7 @@ namespace CG.Pluralization
             }
 
             // Handle the classical variants of modern inflections
-            // 
+            //
             if (this._classicalInflectionPluralizationService.ExistsInFirst(suffixWord))
             {
                 return prefixWord + this._classicalInflectionPluralizationService.GetSecondValue(suffixWord);
@@ -516,7 +518,7 @@ namespace CG.Pluralization
                 return prefixWord + newSuffixWord;
             }
 
-            // 
+            //
 
             if (suffixWord.EndsWith("y", true, this.Culture))
             {
@@ -602,7 +604,7 @@ namespace CG.Pluralization
                 return prefixWord + this._irregularPluralsPluralizationService.GetFirstValue(suffixWord);
             }
 
-            // handle singluarization for words ending with sis and pluralized to ses, 
+            // handle singluarization for words ending with sis and pluralized to ses,
             // e.g. "ses" -> "sis"
             if (this._wordsEndingWithSisPluralizationService.ExistsInSecond(suffixWord))
             {
@@ -678,7 +680,7 @@ namespace CG.Pluralization
             }
 
             // Handle the classical variants of modern inflections
-            // 
+            //
             if (this._classicalInflectionPluralizationService.ExistsInSecond(suffixWord))
             {
                 return prefixWord + this._classicalInflectionPluralizationService.GetFirstValue(suffixWord);
@@ -726,7 +728,7 @@ namespace CG.Pluralization
                 return prefixWord + newSuffixWord;
             }
 
-            // 
+            //
 
             if (suffixWord.EndsWith("ies", true, this.Culture))
             {
@@ -746,7 +748,7 @@ namespace CG.Pluralization
                 return prefixWord + newSuffixWord;
             }
 
-            // 
+            //
 
 
 
@@ -826,7 +828,7 @@ namespace CG.Pluralization
             prefixWord = word.Substring(0, lastSpaceIndex + 1);
             return word.Substring(lastSpaceIndex + 1);
 
-            // 
+            //
         }
 
         private bool IsCapitalized(string word)
@@ -915,3 +917,5 @@ namespace CG.Pluralization
         #endregion
     }
 }
+
+#endif

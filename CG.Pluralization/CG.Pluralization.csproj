@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netstandard1.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard1.0;net40</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <IncludeSource>true</IncludeSource>
@@ -21,6 +21,10 @@
 
   <ItemGroup>
     <PackageReference Include="Nerdbank.GitVersioning" Version="2.1.23" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Data.Entity.Design" Condition=" '$(TargetFramework)' == 'net40' " />
   </ItemGroup>
 
 </Project>

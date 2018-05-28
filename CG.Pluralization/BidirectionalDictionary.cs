@@ -12,7 +12,9 @@ using System.Linq;
 using System.Text;
 using System.Globalization;
 
-namespace CG.Pluralization
+#if !NET40
+
+namespace System.Data.Entity.Design.PluralizationServices
 {
     /// <summary>
     /// This class provide service for both the singularization and pluralization, it takes the word pairs
@@ -126,3 +128,5 @@ namespace CG.Pluralization
 
     }
 }
+
+#endif
