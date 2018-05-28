@@ -1,70 +1,34 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QA", "QA", "{0653EB3B-F8CE-4A23-9382-7F1F84FCFB6B}"
-EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "QASource", "QA\QASource\QASource.shproj", "{C0F18CF8-A0E2-4449-A61B-4D6DE88D780B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QA.Net461", "QA\QA.Net461\QA.Net461.csproj", "{127C4186-9BEA-42EE-91BF-57E6E52F5950}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QA.Net462", "QA\QA.Net462\QA.Net462.csproj", "{F82E9D23-F9F9-493B-AB26-80177B284304}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QA.NetCore", "QA\QA.NetCore\QA.NetCore.csproj", "{24DFBCBB-7901-4A2A-B183-61C6E70AAB90}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QA.Net471", "QA\QA.Net471\QA.Net471.csproj", "{C64A78A8-AB94-485B-9A25-D69B8A491011}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F21DCE21-871B-4983-87B2-8DCBEB2D53D5}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CG.Pluralization", "CG.Pluralization\CG.Pluralization.csproj", "{8B84BBD5-A98F-4E77-BDE1-E35B85C230DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Pluralization", "CG.Pluralization\CG.Pluralization.csproj", "{8B84BBD5-A98F-4E77-BDE1-E35B85C230DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CG.Pluralization.Tests", "CG.Pluralization.Tests\CG.Pluralization.Tests.csproj", "{06596EDD-6312-4BD7-A209-40D299F3CA66}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		QA\QASource\QASource.projitems*{127c4186-9bea-42ee-91bf-57e6e52f5950}*SharedItemsImports = 4
-		QA\QASource\QASource.projitems*{c0f18cf8-a0e2-4449-a61b-4d6de88d780b}*SharedItemsImports = 13
-		QA\QASource\QASource.projitems*{c64a78a8-ab94-485b-9a25-d69b8a491011}*SharedItemsImports = 4
-		QA\QASource\QASource.projitems*{f82e9d23-f9f9-493b-ab26-80177b284304}*SharedItemsImports = 4
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{127C4186-9BEA-42EE-91BF-57E6E52F5950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{127C4186-9BEA-42EE-91BF-57E6E52F5950}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{127C4186-9BEA-42EE-91BF-57E6E52F5950}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{127C4186-9BEA-42EE-91BF-57E6E52F5950}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F82E9D23-F9F9-493B-AB26-80177B284304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F82E9D23-F9F9-493B-AB26-80177B284304}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F82E9D23-F9F9-493B-AB26-80177B284304}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F82E9D23-F9F9-493B-AB26-80177B284304}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24DFBCBB-7901-4A2A-B183-61C6E70AAB90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24DFBCBB-7901-4A2A-B183-61C6E70AAB90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24DFBCBB-7901-4A2A-B183-61C6E70AAB90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24DFBCBB-7901-4A2A-B183-61C6E70AAB90}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C64A78A8-AB94-485B-9A25-D69B8A491011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C64A78A8-AB94-485B-9A25-D69B8A491011}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C64A78A8-AB94-485B-9A25-D69B8A491011}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C64A78A8-AB94-485B-9A25-D69B8A491011}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8B84BBD5-A98F-4E77-BDE1-E35B85C230DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8B84BBD5-A98F-4E77-BDE1-E35B85C230DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B84BBD5-A98F-4E77-BDE1-E35B85C230DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B84BBD5-A98F-4E77-BDE1-E35B85C230DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06596EDD-6312-4BD7-A209-40D299F3CA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06596EDD-6312-4BD7-A209-40D299F3CA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06596EDD-6312-4BD7-A209-40D299F3CA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06596EDD-6312-4BD7-A209-40D299F3CA66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{C0F18CF8-A0E2-4449-A61B-4D6DE88D780B} = {0653EB3B-F8CE-4A23-9382-7F1F84FCFB6B}
-		{127C4186-9BEA-42EE-91BF-57E6E52F5950} = {0653EB3B-F8CE-4A23-9382-7F1F84FCFB6B}
-		{F82E9D23-F9F9-493B-AB26-80177B284304} = {0653EB3B-F8CE-4A23-9382-7F1F84FCFB6B}
-		{24DFBCBB-7901-4A2A-B183-61C6E70AAB90} = {0653EB3B-F8CE-4A23-9382-7F1F84FCFB6B}
-		{C64A78A8-AB94-485B-9A25-D69B8A491011} = {0653EB3B-F8CE-4A23-9382-7F1F84FCFB6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C74B1FD8-DA2D-4195-A6D5-8F42FA12904A}
