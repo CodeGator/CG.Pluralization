@@ -9,7 +9,6 @@
     <IncludeSource>true</IncludeSource>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Version>0.2018.1</Version>
     <Description>This package contains a portable version of the .NET pluralization service from the System.Data.Entity.Design namespace, that works with .NET 4.61 or above, .NET Core 2.x, or .NET Standard 2.x.
 
 </Description>
@@ -20,7 +19,6 @@
     <Authors>Martin Cook</Authors>
     <Company>CodeGator</Company>
     <PackageIconUrl>http://www.codegator.com/packageDefaultIcon-50x50.png</PackageIconUrl>
-    <FileVersion>0.2018.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,6 +34,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nerdbank.GitVersioning" Version="2.1.23" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
