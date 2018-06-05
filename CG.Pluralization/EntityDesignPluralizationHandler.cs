@@ -26,9 +26,6 @@ namespace System.Data.Entity.Design.PluralizationServices
         /// <summary>
         /// Handler for pluralization service in Entity Design
         /// </summary>
-        /// <param name="doPluralization">overall switch for the service, the service only start working when the value is true</param>
-        /// <param name="userDictionaryPath"></param>
-        /// <param name="errors"></param>
         internal EntityDesignPluralizationHandler(PluralizationService service)
         {
             this.Service = service;
