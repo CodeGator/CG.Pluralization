@@ -9,7 +9,13 @@
 using System;
 using System.Globalization;
 
-namespace CG.Pluralization
+#if NET40
+
+[assembly: System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Data.Entity.Design.PluralizationServices.PluralizationService))]
+
+#else
+
+namespace System.Data.Entity.Design.PluralizationServices
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Pluralization")]
     public abstract class PluralizationService
@@ -28,9 +34,21 @@ namespace CG.Pluralization
         /// </summary>
         /// <param name="culture">CultureInfo</param>
         /// <returns>PluralizationService</returns>
-        public static PluralizationService CreateService()
+        public static PluralizationService CreateService(CultureInfo culture)
         {
-            return new EnglishPluralizationService();
+            if (culture == null)
+            {
+                throw new ArgumentNullException(nameof(culture));
+            }
+
+            if (culture.TwoLetterISOLanguageName == "en")
+            {
+                return new EnglishPluralizationService();
+            }
+
+            throw new NotImplementedException($"Unsupported locale for pluralization service: \"{culture.DisplayName}\".");
         }
     }
 }
+
+#endif

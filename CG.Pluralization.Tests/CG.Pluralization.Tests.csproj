@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0;netcoreapp1.0;net461</TargetFrameworks>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -16,6 +16,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CG.Pluralization\CG.Pluralization.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="System.Data.Entity.Design" Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' " />
   </ItemGroup>
 
 </Project>

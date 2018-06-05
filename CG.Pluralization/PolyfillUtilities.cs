@@ -9,11 +9,11 @@
 using System;
 using System.Globalization;
 
-namespace CG.Pluralization
+namespace System.Data.Entity.Design.PluralizationServices
 {
     internal static class PolyfillUtilities
     {
-#if !NETSTANDARD2_0
+#if NETSTANDARD1_0
         internal static string ToLower(this string value, CultureInfo cultureInfo)
         {
             if (value == null)
