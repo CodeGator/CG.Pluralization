@@ -6,6 +6,7 @@ branches:
 environment:
   COVERALLS_REPO_TOKEN:
     secure: cbqlOmIX0yBIg1IsaBazw4VMFM8zL9Yaee77k2XsdsSN3cEXLkOHJ4knRlLxtzBE
+configuration: Release
 before_build:
 - cmd: before_build.cmd
 build:
@@ -18,7 +19,7 @@ test:
 after_test:
 - cmd: after_test.cmd
 artifacts:
-- path: .\CG.Pluralization\bin\Debug\*.nupkg
+- path: .\CG.Pluralization\bin\$(Configuration)\*.nupkg
   name: nuget-packages
 deploy:
 - provider: NuGet
