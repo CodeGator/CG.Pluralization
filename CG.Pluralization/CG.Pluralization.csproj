@@ -7,9 +7,7 @@
     <IncludeSource>true</IncludeSource>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Description>This package contains a portable version of the .NET pluralization service from the System.Data.Entity.Design namespace, that works with .NET 4.61 or above, .NET Core 2.x, or .NET Standard 2.x.
-
-</Description>
+    <Description>This package contains a portable version of the .NET pluralization service from the System.Data.Entity.Design namespace, that works with .NET 4.61 or above, .NET Core 2.x, or .NET Standard 2.x.</Description>
     <Copyright>Original code Copyright (c) Microsoft Corporation.  All rights reserved. Any alterations Copyright CodeGator. All rights reserved.</Copyright>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/CodeGator/CG.Pluralization</PackageProjectUrl>
