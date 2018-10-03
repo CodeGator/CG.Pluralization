@@ -16,6 +16,8 @@
     <Authors>Martin Cook</Authors>
     <Company>CodeGator</Company>
     <PackageIconUrl>http://www.codegator.com/packageDefaultIcon-50x50.png</PackageIconUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>StrongNameKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
