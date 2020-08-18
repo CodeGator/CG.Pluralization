@@ -12,4 +12,3 @@ The code is licensed under the MIT license.
 
 I created this assembly because I needed a pluralization service that would behave in a predictable manner and work with whatever platform/version I was targeting.
 
-I changed the namespace for the service to match my assembly, and to prevent confusion, if Microsoft ever releases the service for .NET Core and/or .NET Standard.
